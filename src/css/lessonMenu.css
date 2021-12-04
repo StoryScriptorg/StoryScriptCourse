@@ -1,0 +1,143 @@
+.lessonMenu main {
+	margin: 2.5vw;
+}
+
+.lessonMenu nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.lessonMenu nav button {
+	width: 100%;
+	padding: 5px 0;
+	background: linear-gradient(to top, whitesmoke, white);
+	transition: 250ms;
+	text-align: center;
+	border: 1px solid whitesmoke;
+	color: black;
+	text-decoration: none;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 16px;
+}
+
+.lessonMenu nav button:hover {
+	background: whitesmoke;
+}
+
+.lessonMenu center {
+	padding: 40px;
+}
+
+.table1 {
+	--table-theme: #2980b9;
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table1 thead tr {
+	background-color: var(--table-theme);
+	color: white;
+	text-align: left;
+	font-weight: bold;
+}
+
+.table1 th, .table1 td {
+	padding: 12px 15px;
+}
+
+.table1 tbody tr {
+	border-bottom: 1px solid #dddddd;
+}
+
+.table1 tbody tr:nth-of-type(even) {
+	background-color: whitesmoke;
+}
+
+.table1 tbody tr:last-of-type {
+	border-bottom: 2px solid var(--table-theme);
+}
+
+.table1 tbody tr.active {
+	color: var(--table-theme);
+}
+
+pre {
+	border: 1px solid darkgray;
+	border-radius: 2px;
+	padding: 10px;
+	background: whitesmoke;
+}
+
+.btn1 {
+	--button-theme: #211F1F; /* (Raisin Black from GitHub Cat Icon) */
+	border-radius: 5px;
+	border: 1px solid black;
+	background: var(--button-theme);
+	font-weight: bold;
+	color: white;
+	padding: 5px 10px;
+}
+
+.sidebar {
+	position: fixed;
+	float: left;
+	margin-top: 12px;
+	height: 100vh;
+	background: white;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar ul {
+	padding-inline-start: 15px;
+}
+
+.sidebar ul li {
+	list-style: none;
+}
+
+.sidebar ul li button {
+	background: none;
+	border: none;
+	transition: 250ms;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	font-size: 16px;
+}
+.sidebar ul li button:hover {
+	background: whitesmoke;
+}
+
+input {
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.btn2 {
+	--button-theme: #2980b9;
+	background: var(--button-theme);
+	border-radius: 5px;
+	border: 1px solid black;
+	color: white;
+	transition: 250ms;
+	transform: scale(1, 1);
+}
+
+.btn2:hover {
+	transform: scale(1.05, 1.05);
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
+}

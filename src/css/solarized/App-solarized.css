@@ -1,0 +1,7 @@
+.App ul li a {
+  color: var(--base3);
+}
+
+.App ul li:hover {
+  background-color: var(--base02);
+}

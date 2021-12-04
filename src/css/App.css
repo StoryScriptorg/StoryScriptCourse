@@ -1,0 +1,30 @@
+.App {
+  margin: 2.5vw;
+}
+
+.App ul li a {
+  display: block;
+  padding: 10px 5px;
+  color: black;
+  text-decoration: none;
+}
+
+.App ul li:hover {
+  background-color: whitesmoke;
+}
+
+.App ul li {
+  transition: 250ms;
+  list-style: none;
+}
+
+.App #WhereYouLeftOff {
+  padding: 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.App #WhereYouLeftOff .lessonInfo {
+  margin: 5px;
+  padding-bottom: 10px;
+}

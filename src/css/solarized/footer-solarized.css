@@ -1,0 +1,8 @@
+footer {
+	color: white;
+	background: var(--base02);
+}
+
+footer #switchTheme button {
+	color: var(--base3);
+}
