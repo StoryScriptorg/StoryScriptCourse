@@ -74,7 +74,7 @@
 
 pre {
 	border: 1px solid darkgray;
-	border-radius: 2px;
+	border-radius: 5px;
 	padding: 10px;
 	background: whitesmoke;
 }
@@ -86,7 +86,8 @@ pre {
 	background: var(--button-theme);
 	font-weight: bold;
 	color: white;
-	padding: 5px 10px;
+	padding: 10px 15px;
+	margin: 5px 10px;
 }
 
 .sidebar {
