@@ -26,20 +26,20 @@ export default function Lesson0() {
                     StoryScript is an <ExternalLink href="https://en.wikipedia.org/wiki/Interpreter_(computing)">interpreter <FaExternalLinkAlt/></ExternalLink> which has an interactive <ExternalLink href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">language shell <FaExternalLinkAlt/></ExternalLink> and a File execution support. Just like <ExternalLink href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python. <FaExternalLinkAlt/></ExternalLink><br/>
                     And StoryScript interpreter is made in Python. Which you may think "then, StoryScript would be pretty slow", But, Remember that in every programming languages, If you write it to be slow, it will be slow. If you write it to be fast, it will be fast.<br/>
                     Here is the Benchmarking result of basic expression evaluation time of StoryScript:<br/>
-                    </p><pre>
-Hello world (Once): 0.0001996999999999971ms<br/>
-Hello world (Once): 0.0007591000000000125ms<br/>
-Hello world (Once): 9.880000000000999e-05ms<br/>
-Hello world (25): 0.0012548000000000004ms<br/>
-Hello world (50): 0.0023697999999999775ms<br/>
-Variable declaration (Once): 9.660000000000224e-05ms<br/>
-Variable declaration (Once): 7.009999999998962e-05ms<br/>
-Variable declaration (Once): 6.570000000000187e-05ms<br/>
-Hello world loopfor (10) loop (Once): 4.609999999999337e-05ms<br/>
-Hello world loopfor (10) loop (Once): 2.5200000000002998e-05ms<br/>
-tingtong loopfor (10) loop (Once): 2.5700000000017376e-05ms<br/>
-tingtong loopfor (10) loop (Once): 2.569999999998962e-05ms<br/>
-                    </pre><p>
+                    </p><pre><code class="language-plaintext">
+{`Hello world (Once): 0.0001996999999999971ms
+Hello world (Once): 0.0007591000000000125ms
+Hello world (Once): 9.880000000000999e-05ms
+Hello world (25): 0.0012548000000000004ms
+Hello world (50): 0.0023697999999999775ms
+Variable declaration (Once): 9.660000000000224e-05ms
+Variable declaration (Once): 7.009999999998962e-05ms
+Variable declaration (Once): 6.570000000000187e-05ms
+Hello world loopfor (10) loop (Once): 4.609999999999337e-05ms
+Hello world loopfor (10) loop (Once): 2.5200000000002998e-05ms
+tingtong loopfor (10) loop (Once): 2.5700000000017376e-05ms
+tingtong loopfor (10) loop (Once): 2.569999999998962e-05ms`}
+                    </code></pre><p>
                     <ExternalLink href="https://github.com/StoryScriptorg/StoryScript/tree/main/src/benchmark.txt">See this on Github <FaGithub/></ExternalLink><br/>
                     <ExternalLink href="https://github.com/StoryScriptorg/StoryScript/tree/main/src/benchmarking.py">See the benchmarking code <FaGithub/></ExternalLink><br/><br/>
                     But for people who still love other languages or cares about speed, StoryScript has a <ExternalLink href="https://en.wikipedia.org/wiki/Source-to-source_compiler">transpiler <FaExternalLinkAlt/></ExternalLink> for other programming languages.

@@ -2,10 +2,10 @@ import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import Footer from "./footer.jsx"
 
 const App = lazy(() => import('./App.jsx'));
 const LessonMenu = lazy(() => import('./lesson.jsx'));
-const Footer = lazy(() => import('./footer.jsx'));
 
 const AppRouter = () => (
   <BrowserRouter>

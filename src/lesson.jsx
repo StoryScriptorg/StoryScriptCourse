@@ -1,7 +1,9 @@
 import './css/index.css';
-import { useState, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight, FaHome, FaBars } from "react-icons/fa";
 import "./css/lessonMenu.css";
+import hljs from "highlight.js";
+import "highlight.js/styles/monokai.css";
 
 const theme = localStorage.getItem("theme");
 switch(theme) {
@@ -51,7 +53,11 @@ const lessons = [
 		{id: 0, title: "Data types", content: () => {
 			const Comp = lazy(() => import("./lessons/Lesson5.jsx"));
 			return <Comp/>;
-		}}
+		}},
+        {id: 1, title: "Variables", content: () => {
+            const Comp = lazy(() => import("./lessons/Lesson6.jsx"));
+            return <Comp/>;
+        }}
 	] // Unit 1
 ]
 
@@ -76,20 +82,21 @@ function NavBar(props) {
 	}
 
 	function findPrevious() {
-		let rId = parseInt(props.lid) - 1;
-		if (lessons[props.unit]?.[rId]) {
-			previousInfo = {unit: props.unit, lesson: rId};
+		let resultId = parseInt(props.lid) - 1;
+		if (lessons[props.unit]?.[resultId]) {
+			previousInfo = {unit: props.unit, lesson: resultId};
 			return <button onClick={goPrevious} id="second"><FaArrowLeft/> Previous</button>
 		}
 		if (props.unit - 1 < 0) {
 			console.log("This is the first lesson. Cannot go to the previous lesson.");
 			return "";
 		}
-		if (lessons[props.unit - 1]) {
-			previousInfo = {unit: props.unit - 1, lesson: rId};
+        let unitId = props.unit;
+		if (lessons[--unitId]) {
+			previousInfo = {unit: unitId, lesson: lessons[unitId].length - 1};
 			return <button onClick={goPrevious} id="second"><FaArrowLeft/> Previous</button>;
 		}
-		console.error("Unexpected error: Expected unreachable code, but reached.");
+		console.error("Unexpected error: Unexpected unreachable code, but reached.");
 		return "";
 	}
 
@@ -107,7 +114,7 @@ function NavBar(props) {
 			nextInfo = {unit: parseInt(props.unit) + 1, lesson: 0}
 			return <button onClick={goNext} id="third"><FaArrowRight/> Next</button>;
 		}
-		console.error("Unexpected error: Expected unreachable code, but reached.");
+		console.error("Unexpected error: Unexpected unreachable code, but reached.");
 		return "";
 	}
 
@@ -167,6 +174,16 @@ function LessonMenu({ match: { params }}) {
 	let [id, setId] = useState(params.id);
 	let [sideBarShouldAppear, setSideBarShouldAppear] = useState(false);
 
+    function LoadingText() {
+        useEffect(() => {
+            return () => {
+                hljs.highlightAll();
+            }
+        }, []);
+
+        return <main><h1>Loading lesson...</h1></main>;
+    }
+
 	function getLessonContent() {
 		try {
 			return lessons[unit][id].content();
@@ -190,7 +207,7 @@ function LessonMenu({ match: { params }}) {
 		<div className="lessonMenu">
 			<NavBar unit={unit} lid={id} setters={{unit: setUnit, id: setId, sidebar: setSideBarShouldAppear}} sidebarShouldAppear={sideBarShouldAppear}/><br/>
 			{getSideBar()}
-			<Suspense fallback={<main><h1>Loading lesson...</h1></main>}>
+			<Suspense fallback={<LoadingText/>}>
 				{getLessonContent()}
 			</Suspense>
 		</div>

@@ -13,21 +13,21 @@ export default function Lesson4() {
                     { /* eslint-disable */ }
                     Multiline comments are comments that use <code>/*</code> as the sign to start the comment section, and <code>*/</code> as the sign to end the comment section.<br/>
                     For example:
-                </p><pre>
-print ("Hello, world!") /*<br/>
-This is multiline comment.<br/>
-As the name suggest, This comment can be expand to many lines<br/>
-like this.<br/>
-*/
-                </pre><p>
+                </p><pre><code className="language-csharp">
+{`print("Hello, world!") /*
+This is multiline comment.
+As the name suggest, This comment can be expand to many lines
+like this.
+*/`}
+                </code></pre><p>
                     And next, <b>Inline comments</b>. Inline comments are a comments that is only limit to one line.<br/>
                     It uses <code>//</code> as the sign to start the comment. But it has to end sign. meaning anything after that will be considered comments.<br/>
                     For example:
-                </p><pre>
-print ("Hello, world!") // this is inline comments<br/>
-// inline comments cannot expand to other lines normally<br/>
-// like multiline commands does
-                </pre>
+                </p><pre><code className="language-csharp">
+{`print("Hello, world!") // this is inline comments
+// inline comments cannot expand to other lines normally
+// like multiline commands does`}
+                </code></pre>
             </main>
         </IconContext.Provider>
     )

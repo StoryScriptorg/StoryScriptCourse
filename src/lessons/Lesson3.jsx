@@ -15,17 +15,11 @@ export default function Lesson3() {
                     And, <code>print</code> is a <i>built-in function</i> which means that you can use this anywhere in your program<br/>
                     And yes, you can print almost everything.<br/>
                     Example of the print method:
-                </p><pre>
-                    print ("message")<br/>
-                    print (69)<br/>
-                    print (3.14)
-                </pre>
-                <h2>The limitation</h2>
-                <p>
-                    You may see in Lesson 0 (StoryScript complexity section) that <code>print("something")</code> is invalid but <code>print ("something")</code> is the correct way of doing it<br/>
-                    This is because the code processor needs to know what <i>function</i> you are looking for exactly.<br/>
-                    You can read more about this in the <a className="link" href="https://gitbook.io/StoryScript/">language reference</a> documentation.
-                </p>
+                </p><pre><code className="language-python">
+{`print("message")
+print(69)
+print(3.14)`}
+                </code></pre>
             </main>
         </IconContext.Provider>
     )

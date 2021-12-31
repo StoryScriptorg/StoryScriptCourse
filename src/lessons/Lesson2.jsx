@@ -54,17 +54,17 @@ export default function Lesson2() {
                     By connect message together, We call it <b>String concatination</b>.<br/>
                     Basic String concatination can be done by using the plus (<code>+</code>) sign.<br/>
                     For example:
-                </p><pre>
-    "Hello, " + "world!"
-                </pre>
+                </p><pre><code className="language-python">
+"Hello, " + "world!"
+                </code></pre>
                 <h3>String multiplication</h3>
                 <p>
                     By "String multiplication", this means you <i>multiply</i> the message.<br/>
                     This can be done using the star (<code>*</code>) sign.<br/>
                     It may sounds a bit hard to understand, But here's the example:
-                </p><pre>
-    "Hello!" * 4
-                </pre><p>
+                </p><pre><code className="language-python">
+"Hello!" * 4
+                </code></pre><p>
                     The output of the code above should be "Hello!Hello!Hello!Hello!".
                 </p>
             </main>
