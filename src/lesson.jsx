@@ -1,5 +1,6 @@
 import './css/index.css';
 import { useState, lazy, Suspense, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight, FaHome, FaBars } from "react-icons/fa";
 import "./css/lessonMenu.css";
 import hljs from "highlight.js";
@@ -169,7 +170,8 @@ function SideBar(props) {
 	)
 }
 
-function LessonMenu({ match: { params }}) {
+function LessonMenu(props) {
+	let params = useParams();
 	let [unit, setUnit] = useState(params.unit);
 	let [id, setId] = useState(params.id);
 	let [sideBarShouldAppear, setSideBarShouldAppear] = useState(false);
