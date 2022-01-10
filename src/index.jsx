@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import Footer from "./footer.jsx"
 
@@ -10,8 +10,10 @@ const LessonMenu = lazy(() => import('./lesson.jsx'));
 const AppRouter = () => (
   <BrowserRouter>
     <Suspense fallback={<center><h2>Loading...</h2></center>}>
-      <Route exact path="/" component={App}/>
-      <Route path="/lesson/:unit/:id" render={(props) => <LessonMenu {...props}/>}/>
+      <Routes>
+        <Route exact path="/" element={<App />}/>
+        <Route path="/lesson/:unit/:id" element={<LessonMenu />}/>
+      </Routes>
     </Suspense>
   </BrowserRouter>
 )

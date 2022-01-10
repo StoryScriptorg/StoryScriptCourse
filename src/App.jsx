@@ -1,5 +1,5 @@
 import './css/index.css';
-import "./css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/App.css';
 import { FaSquare, FaCheckSquare } from "react-icons/fa";
 
